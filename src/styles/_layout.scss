@@ -1,0 +1,237 @@
+@use "globals" as *;
+
+@font-face {
+    font-family: $fuente-encabezados;
+    src: url(../assets/fonts/RobotoSlab-Regular.woff2);
+}
+
+@font-face {
+    font-family: $fuente-textos;
+    src: url(../assets/fonts/NotoSans_Condensed-Regular.woff2);
+}
+
+* {
+    color: $grey-grey25;
+    font-family: $fuente-textos;
+}
+
+html {
+    background-color: $primarios-primary;
+}
+
+main {
+    margin-top: 50px;
+
+    section {
+        h1 {
+            width: 60%;
+            margin: 0 auto;
+            padding: 30px 0;
+            text-align: center;
+            font-size: $tamaño-heading1;
+            font-family: $fuente-encabezados;
+        }
+
+        p {
+            text-align: center;
+            width: 50%;
+            margin: 0px auto;
+            font-size: $tamaño-body-m;
+        }
+
+        #nombre {
+            width: 50%;
+            margin: 0 auto 20px auto;
+            font-size: $tamaño-heading2;
+            font-family: $fuente-encabezados;
+
+            span {
+                color: $primarios-secondary;
+            }
+        }
+
+        .text-proyectos {
+            width: 60%;
+            text-align: start;
+        }
+
+        .proyecto1 {
+            margin: 30px auto;
+            width: 70%;
+
+            img {
+                width: 100%;
+            }
+
+            .botones {
+                display: flex;
+                justify-content: center;
+                background: radial-gradient(ellipse, $primarios-complementary 0%, $primarios-primary 60%);
+
+                .boton {
+                    align-content: center;
+                    width: 35%;
+                    height: 170px;
+                    text-align: center;
+
+                    h3 {
+                        font-family: $fuente-encabezados;
+                        font-size: $tamaño-heading3;
+                        margin-top: 0;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        font-size: $tamaño-heading3;
+                        background-color: $primarios-secondary;
+                        padding: 5px 15px;
+                        border-radius: 10px;
+                    }
+                }
+            }
+            @include respond-to("large"){
+                width: 60%;
+                display: flex;
+                justify-content: space-between;
+                img{
+                    width: 50%;
+                }
+                .botones{
+                    width: 50%;
+                    .boton{
+                        width: 40%;
+                    }
+                }
+            }
+        }
+
+        .proyecto2 {
+            margin: 30px auto;
+            width: 70%;
+
+            img {
+                width: 100%;
+            }
+
+            .botones {
+                display: flex;
+                justify-content: center;
+                background: radial-gradient(ellipse, $primarios-complementary 0%, $primarios-primary 60%);
+
+                .boton {
+                    align-content: center;
+                    width: 35%;
+                    height: 170px;
+                    text-align: center;
+
+                    h3 {
+                        font-family: $fuente-encabezados;
+                        font-size: $tamaño-heading3;
+                        margin-top: 0;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        font-size: $tamaño-heading3;
+                        background-color: $primarios-secondary;
+                        padding: 5px 15px;
+                        border-radius: 10px;
+                    }
+                }
+            }
+            @include respond-to("large"){
+                width: 60%;
+                display: flex;
+                justify-content: space-between;
+                img{
+                    width: 50%;
+                    order: 2;
+                }
+                .botones{
+                    width: 50%;
+                    order: 1;
+                    .boton{
+                        width: 40%;
+                    }
+                }
+            }
+        }
+
+        .contacta-conmigo {
+            width: 60%;
+            margin: 0 auto;
+            .input {
+                background-color: $primarios-complementary;
+                padding: 10px;
+                border: 2px solid $primarios-secondary;
+                border-radius: 10px;
+                margin-bottom: 10px;
+                label {
+                    color: $grey-grey75;
+                    display: block;
+                }
+
+                input {
+                    border: none;
+                    outline: none; 
+                    background-color: $primarios-complementary;
+                    color: $grey-grey75;
+                }
+                textarea{
+                    border: none;
+                    outline: none; 
+                    background-color: $primarios-complementary;
+                    color: $grey-grey75;
+                    resize: none;
+                }
+            }
+            a{
+                display: inline-block;
+                margin: 10px 0;
+                text-decoration: none;
+                background-color: $primarios-secondary;
+                font-size: $tamaño-heading3;
+                font-family: $fuente-encabezados;
+                border-radius: 10px;
+                padding: 10px 15px;
+            }
+        }
+        .iconos{
+            width: 43%;
+            margin: 20px auto;
+            text-align: center;
+            a{
+                text-decoration: none;
+                img{
+                    margin: 10px;
+                }
+            }
+        }
+    }
+    .avatar {
+        text-align: center;
+        padding: 100px 0;
+        margin: 0 auto;
+        width: 70%;
+        border-radius: 50%;
+        background: radial-gradient(ellipse, $primarios-complementary 0%, $primarios-primary 60%);
+        @include respond-to("large"){
+            width: 50%;
+        }
+    }
+
+    .introduccion {
+        width: 60%;
+        margin: 0 auto;
+        font-size: $tamaño-body-m;
+        @include respond-to("large"){
+            width: 50%;
+        }
+    }
+}
+
+.text-start{
+    @include respond-to("large"){
+        text-align: start;
+    }
+}

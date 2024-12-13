@@ -1,0 +1,31 @@
+@use "globals" as *;
+
+*{
+    color: $grey-grey25;
+}
+header{
+    box-sizing: border-box;
+    border-bottom: 5px solid $primarios-complementary;
+    ul{
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        padding: 40px 0;
+        font-size: $tamaño-heading3;
+        font-family: $fuente-encabezados;
+        @include respond-to("large"){
+            display: flex;
+            justify-content: center;
+        }
+        li{
+            @include respond-to("large"){
+                margin: 0 30px;
+            }
+            a{
+                text-decoration: none;
+            }
+            list-style: none;
+            margin-bottom: 15px;
+        }
+    }
+}

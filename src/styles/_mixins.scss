@@ -1,0 +1,16 @@
+@use "sass:map";
+@mixin respond-to($breakpoint) {
+    $breakpoints: (
+        "large": "min-width: 599px",
+    );
+
+    $query: map.get($breakpoints, $breakpoint);
+
+    @if $query {
+        @media (#{$query}) {
+            @content;
+        }
+    }@else {
+        @error "No se encontró el breakpoint `#{$breakpoint}`.";
+    }
+}
